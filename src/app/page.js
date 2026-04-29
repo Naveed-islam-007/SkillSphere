@@ -1,7 +1,12 @@
-import Image from "next/image";
+import Banner from "@/components/Banner";
+import Generation from "@/components/Generation";
 
 export default function Home() {
   return (
-    <h2>Hello</h2>
+    <div>
+            <Banner></Banner>
+    <Generation></Generation>
+    </div>
+    
   );
 }
