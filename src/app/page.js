@@ -1,4 +1,5 @@
 import Banner from "@/components/Banner";
+import ExtraSec from "@/components/ExtraSec";
 import Generation from "@/components/Generation";
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <div>
             <Banner></Banner>
     <Generation></Generation>
+    <ExtraSec></ExtraSec>
     </div>
     
   );

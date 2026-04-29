@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const Banner = () => {
   return (
-    <div className="hero bg-base-200 min-h-screen">
+    <div className="hero bg-base-200 min-h-[80vh]">
       <div className="hero-content flex-col lg:flex-row-reverse gap-10">
         <Image
           src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600"
@@ -17,6 +17,9 @@ const Banner = () => {
             Explore hundreds of courses taught by expert instructors. Whether you are a beginner or
             a pro, SkillSphere has something for everyone.
           </p>
+          <p className="text-base-content/70 max-w-md" >Upgrade Your Skills Today 🚀. </p>
+          <p className="text-base-content/70 max-w-md">Learn from Industry Experts</p>
+          
           <button className="btn btn-primary">Get Started</button>
         </div>
       </div>
