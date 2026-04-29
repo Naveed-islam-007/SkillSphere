@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "title": "Complete Web Development Bootcamp",
+    "instructor": "John Doe",
+    "duration": "20 hours",
+    "rating": 4.8,
+    "level": "Beginner",
+    "description": "Learn full-stack web development from scratch with HTML, CSS, JavaScript, React and Node.js.",
+    "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600",
+    "category": "Development"
+  },
+  {
+    "id": 2,
+    "title": "UI/UX Design Masterclass",
+    "instructor": "Sophia Lee",
+    "duration": "15 hours",
+    "rating": 4.7,
+    "level": "Intermediate",
+    "description": "Master the art of designing beautiful and user-friendly interfaces using Figma and Adobe XD.",
+    "image": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600",
+    "category": "Design"
+  },
+  {
+    "id": 3,
+    "title": "Python for Data Science",
+    "instructor": "Michael Smith",
+    "duration": "25 hours",
+    "rating": 4.9,
+    "level": "Intermediate",
+    "description": "Dive deep into Python, Pandas, NumPy, and data visualization to become a data science expert.",
+    "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600",
+    "category": "Data Science"
+  },
+  {
+    "id": 4,
+    "title": "React & Next.js Complete Guide",
+    "instructor": "Emily Johnson",
+    "duration": "18 hours",
+    "rating": 4.8,
+    "level": "Intermediate",
+    "description": "Build modern, fast, and scalable web applications using React and Next.js from the ground up.",
+    "image": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=600",
+    "category": "Development"
+  },
+  {
+    "id": 5,
+    "title": "Digital Marketing & SEO",
+    "instructor": "Daniel Brown",
+    "duration": "12 hours",
+    "rating": 4.6,
+    "level": "Beginner",
+    "description": "Learn SEO, social media marketing, email campaigns and Google Ads to grow any business online.",
+    "image": "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=600",
+    "category": "Marketing"
+  },
+  {
+    "id": 6,
+    "title": "Machine Learning A-Z",
+    "instructor": "Olivia Martinez",
+    "duration": "30 hours",
+    "rating": 4.9,
+    "level": "Advanced",
+    "description": "Master supervised, unsupervised, and reinforcement learning with real-world projects using Python and TensorFlow.",
+    "image": "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=600",
+    "category": "Data Science"
+  }
+]
