@@ -1,10 +1,15 @@
 "use client"
 
 import { authClient } from "@/lib/auth-client";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { FaGoogle } from "react-icons/fa";
+
 
 const SignUp = () => {
-
+const router=useRouter()
   const handleSignup = async (e) => {
+    
     e.preventDefault();
     const name = e.target.name.value;
     const image = e.target.image.value;
@@ -19,7 +24,16 @@ const SignUp = () => {
     });
 
     console.log({ data, error });
+    if(!error){
+      router.push('/')
+    }
   };
+
+  const handleGoogle=async()=>{
+    await authClient.signIn.social({
+    provider: "google",
+  });
+  }
 
   return (
     <div className='min-h-[60vh] flex flex-col justify-center items-center space-y-4'>
@@ -40,8 +54,10 @@ const SignUp = () => {
           <input name='password' type="password" className="input" placeholder="Password" />
 
           <button type="submit" className="btn btn-neutral mt-4">Sign Up</button>
+          <p>Already have and accout? <Link href={'/signin'}>Login</Link></p>
         </fieldset>
       </form>
+      <button onClick={handleGoogle} className="btn btn-outline rounded-xl"><FaGoogle />  Sign up with GOOGLE</button>
     </div>
   );
 };
