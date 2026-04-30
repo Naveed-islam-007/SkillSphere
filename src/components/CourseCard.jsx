@@ -30,7 +30,7 @@ const CourseCard = ({course}) => {
                      </div>
                      <div className="card-actions mt-4 ">
                       <Link href={`/courses/${course.id}`}>
-                         <button className="btn btn-primary w-full rounded-xl">Enroll Now</button>
+                         <button className="btn btn-primary w-full rounded-xl">View Details</button>
                       </Link>
                      </div>
                    </div>

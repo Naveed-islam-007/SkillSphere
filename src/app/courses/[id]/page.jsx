@@ -6,7 +6,7 @@ import { GiTeacher } from 'react-icons/gi';
 const CourseDetailPage = async ({ params }) => {
   const { id } = await params;
   const courses = await getCourses();
-  const course = courses.find((c) => c.id === Number(id));
+  const course = courses.find((c) => c.id == id);
 
   const { title, instructor, duration, rating, level, description, image, category } = course;
 
