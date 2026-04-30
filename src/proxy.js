@@ -15,6 +15,5 @@ export async function proxy(request) {
 }
 
 export const config = {
-  runtime: "nodejs",
-  matcher: ["/My-profile", "/courses/:path*"],
+  matcher: ["/My-profile", "/update-profile", "/courses/:path*"],
 };
