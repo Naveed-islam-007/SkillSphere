@@ -1,13 +1,11 @@
+import { getInstructors } from "@/lib/data";
 import Image from "next/image";
 
-const instructors = [
-  { name: "John Doe", subject: "Web Development", img: "https://i.pravatar.cc/150?img=1", students: "12k" },
-  { name: "Sophia Lee", subject: "UI/UX Design", img: "https://i.pravatar.cc/150?img=2", students: "9k" },
-  { name: "Michael Smith", subject: "Data Science", img: "https://i.pravatar.cc/150?img=3", students: "15k" },
-  { name: "Olivia Martinez", subject: "Machine Learning", img: "https://i.pravatar.cc/150?img=4", students: "11k" },
-];
 
-const TopInstructors = () => {
+
+const TopInstructors = async() => {
+
+    const instructors=await getInstructors()
   return (
     <section className="py-16 px-6 bg-gray-900 text-white">
       <div className="max-w-6xl mx-auto">

@@ -1,11 +1,9 @@
-const tips = [
-  { icon: "🎯", title: "Set Clear Goals", desc: "Break your learning into small daily targets." },
-  { icon: "⏰", title: "Time Management", desc: "Use the Pomodoro technique — 25 min focus, 5 min break." },
-  { icon: "📝", title: "Take Notes", desc: "Writing things down improves retention significantly." },
-  { icon: "🔄", title: "Practice Daily", desc: "Consistency beats intensity — even 30 mins a day adds up." },
-];
+import { getTips } from "@/lib/data";
 
-const LearningTips = () => {
+
+const LearningTips = async() => {
+
+    const tips= await getTips();
   return (
     <section className="py-12 px-6 bg-base-200">
       <div className="max-w-6xl mx-auto">
