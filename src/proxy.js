@@ -1,14 +1,20 @@
-import { getSessionCookie } from "better-auth/cookies";
+import { auth } from "@/lib/auth";
+import { headers } from "next/headers";
 import { NextResponse } from "next/server";
 
-export function proxy(request) {
-  const session = getSessionCookie(request);
+export async function proxy(request) {
+  const session = await auth.api.getSession({
+    headers: await headers(),
+  });
 
-  if (!session) {
-    return NextResponse.redirect(new URL("/signin", request.url));
+  if (session) {
+    return NextResponse.next();
   }
+
+  return NextResponse.redirect(new URL("/signin", request.url));
 }
 
 export const config = {
-  matcher: ["/My-profile",  "/courses/:path*"],
+  runtime: "nodejs",
+  matcher: ["/My-profile", "/courses/:path*"],
 };

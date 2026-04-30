@@ -2,10 +2,14 @@
 
 import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { FaGoogle } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 const SignIn = () => {
   
+const router = useRouter();
+
   const handleLogIn = async (e) => {
     e.preventDefault();
     const email = e.target.email.value;
@@ -14,16 +18,26 @@ const SignIn = () => {
     const { data, error } = await authClient.signIn.email({
       email,
       password,
-      callbackURL: '/',
     });
-    console.log({ data, error });
+
+    if (error) {
+      toast.error("Invalid email or password!");
+    } else {
+      toast.success("Logged in successfully!");
+      router.push('/');
+    }
   };
 
-  const handleGoogle = async () => {
-    await authClient.signIn.social({
-      provider: "google",
-    });
-  };
+ const handleGoogle = async () => {
+  const { data, error } = await authClient.signIn.social({
+    provider: "google",
+    callbackURL: "/",
+  });
+
+  if (error) {
+    toast.error("Google sign in failed!");
+  }
+};
 
   return (
     <div className='min-h-[60vh] flex flex-col justify-center items-center space-y-4'>
