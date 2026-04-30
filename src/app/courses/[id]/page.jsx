@@ -1,5 +1,7 @@
 import { getCourses } from '@/lib/data';
 import Image from 'next/image';
+import { FaClock, FaStar } from 'react-icons/fa';
+import { GiTeacher } from 'react-icons/gi';
 
 const CourseDetailPage = async ({ params }) => {
   const { id } = await params;
@@ -21,9 +23,9 @@ const CourseDetailPage = async ({ params }) => {
       <h1 className="text-4xl font-bold mb-3">{title}</h1>
       <p className="text-base-content/70 mb-6">{description}</p>
       <div className="flex flex-wrap gap-6 text-sm mb-6">
-        <span>👨‍🏫 {instructor}</span>
-        <span>⭐ {rating}</span>
-        <span>⏱ {duration}</span>
+        <span> <GiTeacher /> {instructor}</span>
+        <span><FaStar /> {rating}</span>
+        <span><FaClock /> {duration}</span>
         <span className="badge badge-outline">{level}</span>
       </div>
       <button className="btn btn-primary">Enroll Now</button>

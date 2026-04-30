@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": 13,
     "title": "TypeScript Mastery: From Zero to Hero",
     "instructor": "Ryan Mitchell",
     "duration": "14 hours",
@@ -11,7 +11,7 @@
     "category": "Development"
   },
   {
-    "id": 2,
+    "id": 14,
     "title": "Generative AI & Prompt Engineering",
     "instructor": "Aisha Patel",
     "duration": "10 hours",
@@ -22,7 +22,7 @@
     "category": "Artificial Intelligence"
   },
   {
-    "id": 3,
+    "id": 15,
     "title": "DevOps & CI/CD with Docker and GitHub Actions",
     "instructor": "Carlos Rivera",
     "duration": "16 hours",

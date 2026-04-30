@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import { FaClock, FaStar } from 'react-icons/fa';
+import { GiTeacher } from 'react-icons/gi';
 
 const CourseCard = ({course}) => {
     return (
@@ -19,16 +21,16 @@ const CourseCard = ({course}) => {
                      <h3 className="card-title text-lg">{course.title}</h3>
                      <p className="text-sm text-base-content/60">{course.description}</p>
                      <div className="flex items-center justify-between mt-2 text-sm">
-                       <span>👨‍🏫 {course.instructor}</span>
-                       <span>⭐ {course.rating}</span>
+                       <span className='flex'><GiTeacher /> {course.instructor}</span>
+                       <span className='flex'><FaStar /> {course.rating}</span>
                      </div>
                      <div className="flex items-center justify-between text-sm">
-                       <span>⏱ {course.duration}</span>
+                       <span className='flex'><FaClock /> {course.duration}</span>
                        <span className="badge badge-outline">{course.level}</span>
                      </div>
-                     <div className="card-actions mt-4">
+                     <div className="card-actions mt-4 ">
                       <Link href={`/courses/${course.id}`}>
-                         <button className="btn btn-primary btn-sm w-full">Enroll Now</button>
+                         <button className="btn btn-primary w-full rounded-xl">Enroll Now</button>
                       </Link>
                      </div>
                    </div>

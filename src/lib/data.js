@@ -4,8 +4,8 @@ export const getCourses = async () => {
   return courses;
 };
 
-export const getNewReleases = async () => {
-  const res = await fetch(`https://skill-sphere-rose.vercel.app/new.json`);
-  const newReleases = await res.json();
-  return newReleases;
+export const getHotest = async () => {
+  const res = await fetch(`https://skill-sphere-rose.vercel.app/course.json`);
+  const highestRated = await res.json();
+  return [...highestRated].sort((a,b)=>b.rating-a.rating).slice(0,3);
 };
