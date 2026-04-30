@@ -1,19 +1,19 @@
-"use client"
+"use client";
+
+
 
 
 const SignIn = () => {
-  const handleLogin = (e) => {
-    e.preventDefault();
-    const email = e.target.email.value;
-    const password = e.target.password.value;
-    console.log(email, password);
-  };
+  
+
+  
 
   return (
     <div className='min-h-[60vh] flex flex-col justify-center items-center space-y-4'>
       <h2 className='text-4xl font-bold'>Login Page</h2>
-      <form onSubmit={handleLogin}>
+      <form >
         <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
+
           <label className="label">Email</label>
           <input name='email' type="email" className="input" placeholder="Email" />
 
