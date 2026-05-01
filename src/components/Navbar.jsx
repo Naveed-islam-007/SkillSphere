@@ -18,14 +18,11 @@ const authLinks = [
 const Navbar = () => {
   const userData = authClient.useSession();
   const user = userData.data?.user;
-  console.log(user);
   const pathname = usePathname();
 
   return (
     <div className="navbar bg-base-100 shadow-sm">
 
-     
-     
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -51,7 +48,6 @@ const Navbar = () => {
         <Link href={'/'} className="btn btn-ghost text-xl">🎓 SkillSphere</Link>
       </div>
 
-     
       <div className="navbar-center hidden lg:flex">
         <ul className="list-none flex gap-6">
           {navLinks.map(({ href, label }) => (
@@ -69,8 +65,6 @@ const Navbar = () => {
         </ul>
       </div>
 
-  
-  
       <div className="navbar-end">
         {!user ? (
           <ul className="list-none flex gap-4">
@@ -89,8 +83,23 @@ const Navbar = () => {
           </ul>
         ) : (
           <div className="flex items-center gap-3">
-            <Image src={user.image} className="w-8 h-8 rounded-full" width={10} height={10} alt='user image' />
-            <button onClick={() => authClient.signOut()} className="btn btn-sm btn-neutral">Logout</button>
+            <div className="avatar">
+              <div className="w-9 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                <Image
+                  src={user.image}
+                  alt="user avatar"
+                  width={36}
+                  height={36}
+                  className="rounded-full"
+                />
+              </div>
+            </div>
+            <button
+              onClick={() => authClient.signOut()}
+              className="btn btn-sm btn-neutral"
+            >
+              Logout
+            </button>
           </div>
         )}
       </div>
