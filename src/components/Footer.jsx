@@ -50,7 +50,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* LEGAL */}
+  
         <div>
           <h3 className="font-semibold text-lg mb-4">Legal</h3>
           <ul className="list-none flex flex-col gap-3">
@@ -63,8 +63,6 @@ const Footer = () => {
         </div>
 
       </div>
-
-      {/* BOTTOM BAR */}
       <div className="border-t border-base-300 text-center py-4 text-sm text-base-content/60">
         © {new Date().getFullYear()} 🎓 SkillSphere. All rights reserved.
       </div>
